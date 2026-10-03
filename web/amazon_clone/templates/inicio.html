@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon Clone</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="{% url 'inicio' %}" class="logo">
+            amazon<span>clone</span>
+        </a>
+
+        <div class="search">
+            <input type="text" placeholder="Buscar productos">
+            <button>🔍</button>
+        </div>
+
+        <a href="{% url 'carrito' %}" class="cart-link">
+            🛒 Carrito
+        </a>
+
+    </header>
+
+    <nav class="menu">
+
+        <a href="{% url 'inicio' %}">
+            Inicio
+        </a>
+
+        <a href="{% url 'productos' %}">
+            Productos
+        </a>
+
+        <a href="{% url 'carrito' %}">
+            Mi carrito
+        </a>
+
+    </nav>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>Bienvenido a Amazon Clone</h1>
+
+            <p>
+                Encuentra productos increíbles a los mejores precios.
+            </p>
+
+            <a href="{% url 'productos' %}" class="btn">
+                Ver productos
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            Amazon Clone - Proyecto educativo
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eaeded;
+    color: #111;
+}
+
+/* =========================
+   BARRA SUPERIOR
+   ========================= */
+
+.navbar {
+    background-color: #131921;
+    color: white;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 25px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff9900;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    height: 40px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search button {
+    width: 50px;
+    border: none;
+    background-color: #febd69;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* =========================
+   MENU
+   ========================= */
+
+.menu {
+    background-color: #232f3e;
+    padding: 12px 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #e8f1f8
+    );
+    padding: 60px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.btn {
+    display: inline-block;
+    background-color: #ffd814;
+    color: #111;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #fcd200;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f7ca00;
+}
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.producto h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.precio::before {
+    content: "$";
+}
+
+/* =========================
+   CARRITO
+   ========================= */
+
+.carrito {
+    background-color: white;
+    padding: 25px;
+}
+
+.item-carrito {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-carrito h2 {
+    margin-bottom: 10px;
+}
+
+.total {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background-color: #131921;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
